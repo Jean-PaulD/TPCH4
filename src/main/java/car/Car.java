@@ -1,5 +1,7 @@
 package car;
 
+import carParts.Engine;
+
 /**
  * Created by Jean-Paul D on 2017-03-29.
  */
@@ -10,6 +12,8 @@ public abstract class Car {
     private String colour;
     private int year;
     private static int numberOfWheels = 4;
+
+
 
     public static int getNumberOfWheels() {
         return numberOfWheels;

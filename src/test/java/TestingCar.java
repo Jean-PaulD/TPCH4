@@ -1,6 +1,6 @@
 import car.Car;
+import carType.Coupe;
 import carType.HatchBack;
-import carType.SUV;
 import carType.Sedan;
 import org.junit.Test;
 
@@ -25,8 +25,19 @@ public class TestingCar {
         Sedan s = new Sedan();
         //SUV suv = new SUV();
         Car c = s;
-
+        System.out.println("Inside polymorphism test");
        assertEquals("cars main feature is wrong", "Has 4 doors", c.mainFeature());
+    }
+
+    //alternative to inheritance. Composition
+    @Test
+    public void testComposition(){
+
+        Coupe coupe = new Coupe(4, "52kw", "70nm");
+
+
+        System.out.println("Inside Composition test");
+        assertEquals("This cars power is wrong", "52kw", coupe.engineSpecs().getPower());
     }
 
 }
